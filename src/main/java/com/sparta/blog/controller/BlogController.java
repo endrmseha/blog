@@ -27,17 +27,18 @@ public class BlogController {
         return blogService.getBlogs();
     }
 
+
     @GetMapping("/blogs/contents")
     public List<BlogResponseDto> getBlogsByKeyword(String keyword) {
         return blogService.getBlogsByKeyword(keyword);
     }
 
-    @PutMapping("/blogs/{id}")
+    @PutMapping("/blogs/{id}/{password}")
     public Long updateBlog(@PathVariable Long id, @RequestBody BlogRequestDto requestDto) {
         return blogService.updateBlog(id, requestDto);
     }
 
-    @DeleteMapping("/blogs/{id}")
+    @DeleteMapping("/blogs/{id}/{password}")
     public Long deleteBlog(@PathVariable Long id) {
         return blogService.deleteBlog(id);
     }

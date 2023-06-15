@@ -57,7 +57,6 @@ public class BlogService {
 
         // blog 삭제
         blogRepository.delete(blog);
-
         return id;
     }
 
