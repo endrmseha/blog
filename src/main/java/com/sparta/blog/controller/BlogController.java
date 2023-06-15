@@ -1,5 +1,6 @@
 package com.sparta.blog.controller;
 
+import com.sparta.blog.dto.BlogPasswordDto;
 import com.sparta.blog.dto.BlogRequestDto;
 import com.sparta.blog.dto.BlogResponseDto;
 import com.sparta.blog.service.BlogService;
@@ -23,7 +24,7 @@ public class BlogController {
     }
 
     @GetMapping("/blogs")
-    public List<BlogResponseDto> getBlogs() {
+    public List<BlogPasswordDto> getBlogs() {
         return blogService.getBlogs();
     }
 

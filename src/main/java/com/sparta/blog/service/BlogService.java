@@ -1,5 +1,6 @@
 package com.sparta.blog.service;
 
+import com.sparta.blog.dto.BlogPasswordDto;
 import com.sparta.blog.dto.BlogRequestDto;
 import com.sparta.blog.dto.BlogResponseDto;
 import com.sparta.blog.entity.Blog;
@@ -31,9 +32,9 @@ public class BlogService {
         return blogResponseDto;
     }
 
-    public List<BlogResponseDto> getBlogs() {
+    public List<BlogPasswordDto> getBlogs() {
         // DB 조회
-        return blogRepository.findAllByOrderByModifiedAtDesc().stream().map(BlogResponseDto::new).toList();
+        return blogRepository.findAllByOrderByModifiedAtDesc().stream().map(BlogPasswordDto::new).toList();
     }
 
     public List<BlogResponseDto> getBlogsByKeyword(String keyword) {
