@@ -30,7 +30,7 @@ public class BlogController {
 
 
     @GetMapping("/blogs/contents")
-    public List<BlogResponseDto> getBlogsByKeyword(String keyword) {
+    public List<BlogPasswordDto> getBlogsByKeyword(String keyword) {
         return blogService.getBlogsByKeyword(keyword);
     }
 

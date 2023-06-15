@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface BlogRepository extends JpaRepository<Blog, Long> {
     List<Blog> findAllByOrderByModifiedAtDesc();
-    List<Blog> findAllByContentContainsOrderByModifiedAtDesc(String keyword);
+    List<Blog> findAllByTitleContainsOrderByModifiedAtDesc(String keyword);
 }

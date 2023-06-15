@@ -37,8 +37,8 @@ public class BlogService {
         return blogRepository.findAllByOrderByModifiedAtDesc().stream().map(BlogPasswordDto::new).toList();
     }
 
-    public List<BlogResponseDto> getBlogsByKeyword(String keyword) {
-        return blogRepository.findAllByContentContainsOrderByModifiedAtDesc(keyword).stream().map(BlogResponseDto::new).toList();
+    public List<BlogPasswordDto> getBlogsByKeyword(String keyword) {
+        return blogRepository.findAllByTitleContainsOrderByModifiedAtDesc(keyword).stream().map(BlogPasswordDto::new).toList();
     }
 
     @Transactional
